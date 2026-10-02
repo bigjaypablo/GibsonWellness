@@ -12,6 +12,10 @@ dist/
 .vercel/
 .nitro/
 
+# Template & Sandbox Residuals
+.grok/
+screenshots/
+
 # Environment & Local Configuration
 .env
 .env.local
