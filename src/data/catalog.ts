@@ -132,36 +132,36 @@ export type Testimonial = {
   name: string;
   role: string;
   initials: string;
-  avatar?: string;
+  avatar: string;
   quote: string;
 };
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: "mara",
-    name: "Mara Ellison",
-    role: "Gut & glow, 8 weeks",
-    initials: "ME",
-    avatar: "/images/client1.jpg",
-    quote:
-      "The morning mocktail replaced my second coffee. My skin looks rested, and I finally have a routine I don’t have to think about.",
-  },
-  {
     id: "daniel",
     name: "Daniel Whitaker",
     role: "Daily energy, 3 months",
     initials: "DW",
-    avatar: "/images/client2.jpg",
+    avatar: "/images/client1.jpg",
     quote:
       "Frank’s approach is simple: do the small things every day. Meta and g3 are now as automatic as brushing my teeth.",
   },
   {
-    id: "priya",
-    name: "Priya Nandakumar",
+    id: "mara",
+    name: "Mara Ellison",
+    role: "Gut & glow, 8 weeks",
+    initials: "ME",
+    avatar: "/images/client2.jpg",
+    quote:
+      "The morning mocktail replaced my second coffee. My skin looks rested, and I finally have a routine I don’t have to think about.",
+  },
+  {
+    id: "marcus",
+    name: "Marcus Thorne",
     role: "Coaching client",
-    initials: "PN",
+    initials: "MT",
     avatar: "/images/client3.jpg",
     quote:
-      "I came for collagen. I stayed because Abby made wellness feel like care, not a project. Faith, family, and a glass that actually tastes good.",
+      "I came for energy support, but stayed because Frank and Abby made wellness practical. Faith, focus, and a daily glass that keeps up with my schedule.",
   },
 ];
