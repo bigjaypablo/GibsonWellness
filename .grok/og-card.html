@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("./fonts/CormorantGaramond-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("./fonts/CormorantGaramond-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("./fonts/CormorantGaramond-MediumItalic.ttf") format("truetype");
+      font-weight: 500;
+      font-style: italic;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #FDFBF7;
+    }
+    .stage {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+    }
+    .scene {
+      position: absolute;
+      inset: 0;
+    }
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 760px;
+      color: #2C2A26;
+      z-index: 2;
+    }
+    .lockup h1 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Liberation Serif", serif;
+      font-weight: 600;
+      font-size: 92px;
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+    }
+    .lockup h1 span {
+      display: block;
+    }
+    .lockup .tagline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 26px;
+    }
+    .lockup .tagline i {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: #C4A35A;
+      opacity: 0.9;
+      flex: 0 0 auto;
+    }
+    .lockup .tagline span {
+      font-family: "Cormorant Garamond", "Liberation Serif", serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      color: #C4A35A;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <svg class="scene" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="linen" width="12" height="12" patternUnits="userSpaceOnUse">
+          <path d="M0 6 H12" stroke="#E6DCCB" stroke-width="0.45" opacity="0.45"/>
+          <path d="M6 0 V12" stroke="#E2D6C4" stroke-width="0.4" opacity="0.32"/>
+        </pattern>
+        <radialGradient id="morning" cx="18%" cy="8%" r="78%">
+          <stop offset="0%" stop-color="#FFF8EC"/>
+          <stop offset="38%" stop-color="#FDFBF7" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#EFE6D6" stop-opacity="0.9"/>
+        </radialGradient>
+        <radialGradient id="vignette" cx="50%" cy="50%" r="72%">
+          <stop offset="55%" stop-color="#2C2A26" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#2C2A26" stop-opacity="0.10"/>
+        </radialGradient>
+        <linearGradient id="liquid" x1="0.15" y1="0" x2="0.9" y2="1">
+          <stop offset="0%" stop-color="#F7C9A8"/>
+          <stop offset="42%" stop-color="#EAA07B"/>
+          <stop offset="100%" stop-color="#D07A58"/>
+        </linearGradient>
+        <linearGradient id="liquidTop" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#FBE0C8"/>
+          <stop offset="55%" stop-color="#F0B48D"/>
+          <stop offset="100%" stop-color="#E09A74"/>
+        </linearGradient>
+        <linearGradient id="glassFill" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.42"/>
+          <stop offset="28%" stop-color="#ffffff" stop-opacity="0.06"/>
+          <stop offset="72%" stop-color="#c9d2cc" stop-opacity="0.10"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.38"/>
+        </linearGradient>
+        <linearGradient id="stemGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+          <stop offset="35%" stop-color="#d9d4cb" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.45"/>
+        </linearGradient>
+        <radialGradient id="goldMetal" cx="35%" cy="30%" r="75%">
+          <stop offset="0%" stop-color="#E8D09A"/>
+          <stop offset="45%" stop-color="#C4A35A"/>
+          <stop offset="100%" stop-color="#8F7433"/>
+        </radialGradient>
+        <linearGradient id="leafA" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#7C8C78"/>
+          <stop offset="50%" stop-color="#5C6B5A"/>
+          <stop offset="100%" stop-color="#3F4B3E"/>
+        </linearGradient>
+        <linearGradient id="leafB" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#8A9A84"/>
+          <stop offset="100%" stop-color="#4E5C4C"/>
+        </linearGradient>
+        <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="7"/>
+        </filter>
+        <filter id="softer" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="14"/>
+        </filter>
+        <filter id="grain">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" result="n"/>
+          <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+          <feComponentTransfer in="g" result="a">
+            <feFuncA type="table" tableValues="0 0.045"/>
+          </feComponentTransfer>
+          <feBlend in="SourceGraphic" in2="a" mode="multiply"/>
+        </filter>
+        <filter id="blur1"><feGaussianBlur stdDeviation="1.1"/></filter>
+      </defs>
+
+      <!-- Linen ground -->
+      <rect width="1200" height="630" fill="#FDFBF7"/>
+      <rect width="1200" height="630" fill="url(#linen)"/>
+      <rect width="1200" height="630" fill="url(#morning)"/>
+      <ellipse cx="210" cy="80" rx="280" ry="160" fill="#FFFCF6" opacity="0.7" filter="url(#softer)"/>
+      <ellipse cx="240" cy="520" rx="170" ry="50" fill="#E8A07A" opacity="0.16" filter="url(#softer)"/>
+
+      <!-- Quiet gold frame -->
+      <rect x="28" y="24" width="1144" height="582" fill="none" stroke="#C4A35A" stroke-opacity="0.38" stroke-width="1"/>
+      <rect x="32" y="28" width="1136" height="574" fill="none" stroke="#C4A35A" stroke-opacity="0.16" stroke-width="0.6"/>
+
+      <!-- Left eucalyptus sprig -->
+      <g transform="translate(118,168) rotate(-28)">
+        <path d="M0 8 C 8 70, 10 150, 4 232" fill="none" stroke="#5C6B5A" stroke-width="2.4" stroke-linecap="round"/>
+        <g transform="translate(6,18) rotate(-18)"><ellipse rx="11" ry="26" fill="url(#leafA)"/><path d="M0 -20 V18" stroke="#8A9884" stroke-width="0.7" opacity="0.7"/></g>
+        <g transform="translate(-14,38) rotate(22)"><ellipse rx="10" ry="24" fill="url(#leafB)"/><path d="M0 -18 V16" stroke="#9AA894" stroke-width="0.6" opacity="0.6"/></g>
+        <g transform="translate(10,78) rotate(-12)"><ellipse rx="12" ry="28" fill="url(#leafA)"/></g>
+        <g transform="translate(-16,96) rotate(26)"><ellipse rx="11" ry="25" fill="#657564"/></g>
+        <g transform="translate(8,132) rotate(-20)"><ellipse rx="10" ry="23" fill="url(#leafB)"/></g>
+        <g transform="translate(-12,154) rotate(16)"><ellipse rx="9" ry="21" fill="#546454"/></g>
+        <g transform="translate(4,188) rotate(-8)"><ellipse rx="8" ry="18" fill="#6A7A68"/></g>
+      </g>
+
+      <!-- Upper-right botanicals -->
+      <g transform="translate(1028,132) rotate(18)">
+        <path d="M0 0 C -6 60, -2 120, 8 188" fill="none" stroke="#5C6B5A" stroke-width="2.2" stroke-linecap="round"/>
+        <g transform="translate(-8,16) rotate(-24)"><ellipse rx="12" ry="27" fill="url(#leafA)"/></g>
+        <g transform="translate(14,36) rotate(18)"><ellipse rx="11" ry="25" fill="url(#leafB)"/></g>
+        <g transform="translate(-10,72) rotate(-16)"><ellipse rx="13" ry="29" fill="#5C6B5A"/></g>
+        <g transform="translate(16,94) rotate(22)"><ellipse rx="10" ry="22" fill="#748472"/></g>
+        <g transform="translate(-6,128) rotate(-10)"><ellipse rx="11" ry="24" fill="#4E5C4C"/></g>
+        <g transform="translate(12,156) rotate(14)"><ellipse rx="9" ry="20" fill="#6B7B69"/></g>
+      </g>
+      <g transform="translate(948,86) rotate(52)">
+        <path d="M0 0 C 4 40, 6 78, 2 112" fill="none" stroke="#6A7A68" stroke-width="1.7"/>
+        <g transform="translate(-9,18) rotate(-20)"><ellipse rx="8" ry="18" fill="#7A8A76"/></g>
+        <g transform="translate(10,34) rotate(24)"><ellipse rx="8" ry="17" fill="#5C6B5A"/></g>
+        <g transform="translate(-7,60) rotate(-14)"><ellipse rx="7" ry="16" fill="#687868"/></g>
+        <g transform="translate(8,82) rotate(18)"><ellipse rx="7" ry="14" fill="#4F5D4D"/></g>
+      </g>
+
+      <!-- Glass shadow -->
+      <ellipse cx="236" cy="556" rx="92" ry="16" fill="#2C2A26" opacity="0.10" filter="url(#soft)"/>
+
+      <!-- Coupe glass -->
+      <g transform="translate(236,318)">
+        <!-- foot -->
+        <ellipse cx="0" cy="232" rx="46" ry="8" fill="#d8d0c4" opacity="0.55"/>
+        <ellipse cx="0" cy="228" rx="40" ry="6.5" fill="#f7f3ea" stroke="#cfc6b8" stroke-width="0.8"/>
+        <ellipse cx="0" cy="226" rx="28" ry="3.4" fill="#ffffff" opacity="0.35"/>
+        <!-- stem -->
+        <path d="M -4.2 92 C -3.2 150, -4 196, -9 226 L 9 226 C 4 196, 3.2 150, 4.2 92 Z" fill="url(#stemGrad)" stroke="#c9c2b6" stroke-width="0.6"/>
+        <path d="M -1.4 96 C -0.8 150, -1 196, -4 224" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.55"/>
+        <!-- bowl back -->
+        <path d="M -78 18 C -78 62, -48 94, 0 98 C 48 94, 78 62, 78 18 C 78 -8, 44 -28, 0 -30 C -44 -28, -78 -8, -78 18 Z"
+              fill="#e7efe8" opacity="0.28"/>
+        <!-- liquid -->
+        <path d="M -70 20 C -70 58, -42 88, 0 91 C 42 88, 70 58, 70 20 C 70 8, 38 -2, 0 -4 C -38 -2, -70 8, -70 20 Z"
+              fill="url(#liquid)"/>
+        <ellipse cx="0" cy="20" rx="70" ry="12.5" fill="url(#liquidTop)" opacity="0.95"/>
+        <ellipse cx="0" cy="18" rx="46" ry="6" fill="#fff6ee" opacity="0.22"/>
+        <!-- glass body overlay -->
+        <path d="M -78 18 C -78 62, -48 94, 0 98 C 48 94, 78 62, 78 18 C 78 -8, 44 -28, 0 -30 C -44 -28, -78 -8, -78 18 Z"
+              fill="url(#glassFill)" stroke="#e8e4db" stroke-width="1.3"/>
+        <!-- rim -->
+        <ellipse cx="0" cy="-22" rx="78" ry="14" fill="none" stroke="#f4f1ea" stroke-width="3.2"/>
+        <ellipse cx="0" cy="-22" rx="78" ry="14" fill="none" stroke="#c4bdb0" stroke-width="1"/>
+        <ellipse cx="0" cy="-24" rx="52" ry="6" fill="#ffffff" opacity="0.18"/>
+        <!-- specular -->
+        <path d="M -62 -8 C -70 16, -64 48, -52 70" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.55"/>
+        <path d="M 58 -6 C 66 20, 62 52, 48 72" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+        <!-- condensation -->
+        <circle cx="-28" cy="36" r="2.1" fill="#ffffff" opacity="0.45"/>
+        <circle cx="-18" cy="54" r="1.5" fill="#ffffff" opacity="0.35"/>
+        <circle cx="22" cy="48" r="1.7" fill="#ffffff" opacity="0.3"/>
+        <!-- garnish leaf on rim -->
+        <g transform="translate(46,-28) rotate(38)">
+          <ellipse rx="9" ry="22" fill="url(#leafA)"/>
+          <path d="M0 -16 V14" stroke="#cfe0cc" stroke-width="0.6" opacity="0.7"/>
+        </g>
+        <g transform="translate(58,-18) rotate(62)">
+          <ellipse rx="6" ry="14" fill="#748472"/>
+        </g>
+      </g>
+
+      <!-- Gold ring, lower right -->
+      <g transform="translate(980,508) rotate(-18)">
+        <ellipse cx="4" cy="10" rx="54" ry="16" fill="#2C2A26" opacity="0.08" filter="url(#blur1)"/>
+        <ellipse cx="0" cy="0" rx="48" ry="16" fill="none" stroke="url(#goldMetal)" stroke-width="7"/>
+        <ellipse cx="0" cy="0" rx="48" ry="16" fill="none" stroke="#F1E0B0" stroke-width="1.4" opacity="0.7"/>
+        <ellipse cx="0" cy="0" rx="40" ry="11" fill="none" stroke="#8C732E" stroke-width="1" opacity="0.45"/>
+        <path d="M -18 -12 C -6 -18, 10 -16, 22 -8" fill="none" stroke="#fff6d8" stroke-width="2" opacity="0.55"/>
+      </g>
+
+      <!-- Small lower-left sprig -->
+      <g transform="translate(360,548) rotate(-12)">
+        <path d="M0 0 C 20 -8, 48 -6, 78 8" fill="none" stroke="#5C6B5A" stroke-width="1.6"/>
+        <g transform="translate(18,-6) rotate(-70)"><ellipse rx="6" ry="14" fill="#6A7A68"/></g>
+        <g transform="translate(38,-2) rotate(-58)"><ellipse rx="6" ry="13" fill="#5C6B5A"/></g>
+        <g transform="translate(58,4) rotate(-48)"><ellipse rx="5" ry="12" fill="#748472"/></g>
+      </g>
+
+      <rect width="1200" height="630" fill="url(#vignette)"/>
+      <rect width="1200" height="630" filter="url(#grain)" fill="#FDFBF7" opacity="0.18"/>
+    </svg>
+
+    <div class="lockup">
+      <h1>
+        <span>Gibson</span>
+        <span>Wellness</span>
+      </h1>
+      <div class="tagline">
+        <i aria-hidden="true"></i>
+        <span>Design the life you want</span>
+        <i aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

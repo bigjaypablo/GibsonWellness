@@ -1,0 +1,51 @@
+Act as a senior Web3 / Frontend Web Developer and UI/UX expert. 
+
+Build a modern, ultra-fast, mobile-first Sales Funnel & Storefront Hub for "Gibson Wellness" (Frank & Abby Gibson) using React, Tailwind CSS, and Lucide React icons. 
+
+### Brand Context & Positioning:
+- Target Audience: Health-conscious individuals interested in nutrition, gut health, collagen, and morning wellness routines.
+- Brand Tone: Premium, trustworthy, personal coaching, clean, faith-inspired family wellness.
+- Primary Goal: Convert Instagram/social media traffic into email leads and direct product buyers via high-converting affiliate checkout links.
+
+### Design System & Aesthetics:
+- Visual Style: Minimalist, luxury wellness, clean whitespace, subtle soft rounded corners (rounded-2xl/3xl), smooth transitions, high-contrast typography.
+- Color Palette: Warm neutrals, off-white/cream background (#FDFBF7 or slate-50), deep charcoal text, subtle sage green or warm gold/tan accents (#2D3748, #4A5568, #D4AF37).
+
+### Page Structure & Key Components:
+
+1. Dynamic Navigation & Header:
+   - Minimal header with "Gibson Wellness" logo text, social media icons (Instagram, Facebook), and a subtle cart badge/counter.
+
+2. Hero Section (Personal Branding & Hook):
+   - Avatar / Profile Image placeholder (Frank & Abby Gibson).
+   - Clean headline: "Design & Live The Life You Want"
+   - Subheadline: "Curated daily nutrition, gut health, and age-defying wellness essentials recommended by Frank & Abby."
+   - Primary CTA Button: "Explore Featured Bundles" (Smooth scroll down).
+
+3. Lead Magnet / Email Capture Card (Crucial Feature):
+   - High-converting opt-in box: "Get Our Free 5-Day Gut Health & Morning Routine Guide".
+   - Form field: Email Input + "Get Free Guide" submit button with instant loading/success state feedback.
+   - Micro-copy: "Join 5,000+ taking back control of their wellness. Zero spam."
+
+4. Featured Product Collection (Curated Nu Skin Deep Links):
+   - Filter tabs: [All Products, Gut Health, Skincare, Energy & Daily].
+   - Grid layout of product cards featuring:
+     * High-quality image container badge (e.g., "Level 1 Favorite" or "Most Popular").
+     * Product Title (e.g., "Gut + Glow + Morning Mocktail Kit", "Beauty Focus Collagen+").
+     * Brief outcome-focused description (e.g., "Clinically proven collagen supplement for glowing skin and balanced digestion").
+     * Direct CTA Button: "Shop This Bundle →" (opens affiliate link in new tab).
+
+5. Social Proof / Testimonials Section:
+   - Micro testimonial cards showcasing client transformations or coaching feedback.
+
+6. Tracking & Analytics Integration Setup (Code Ready):
+   - Include clear place-holder event handlers for Google Tag Manager / Meta Pixel tracking (e.g., `trackLeadCapture()`, `trackProductClick(productName)`).
+
+7. Footer:
+   - Copyright notice, affiliate disclosure ("Independent Brand Affiliate"), and Instagram deep link.
+
+### Technical & Code Requirements:
+- Write clean, modern React code using standard Tailwind CSS classes.
+- Use `lucide-react` icons (e.g., Check, ArrowRight, Sparkles, Mail, ShoppingBag).
+- Fully responsive layout optimized specifically for mobile screens (375px–430px) as top priority, while remaining crisp on desktop.
+- Responsive, modular component structure.

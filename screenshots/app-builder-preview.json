@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Gibson Wellness",
+      "hasCanvas": false,
+      "bodyTextLen": 4165,
+      "bodyTextHash": "aed9e840e3c9631f313e75e7dd25f228597d7b136a011d1074797be97eb5d314",
+      "bodyTextPrefix": "Skip to collection Gibson WELLNESS F+A Frank & Abby Gibson Indep",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Gibson Wellness",
+      "hasCanvas": false,
+      "bodyTextLen": 4165,
+      "bodyTextHash": "aed9e840e3c9631f313e75e7dd25f228597d7b136a011d1074797be97eb5d314",
+      "bodyTextPrefix": "Skip to collection Gibson WELLNESS F+A Frank & Abby Gibson Indep",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
